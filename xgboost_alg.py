@@ -76,7 +76,7 @@ joblib.dump(model, 'xgboost_model_big.pkl')
 
 # Тестирование
 y_pred_prob = model.predict_proba(X_test)[:, 1]
-y_pred = (y_pred_prob >= 0.4).astype(int)  # Применение порога 0.4 для классификации
+y_pred = (y_pred_prob >= 0.5).astype(int)  # Применение порога 0.4 для классификации
 
 # Сохранение тестовых данных
 test_predictions = X_test.copy()
